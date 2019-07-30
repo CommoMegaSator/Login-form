@@ -24,7 +24,17 @@ body
   font-weight:bold;
   text-align:center;
   padding-top:30px;
+  color: rgb(45, 38, 255);
 }
+
+/*#boxForm #title:hover{
+  background: none;
+  color: red;
+  font-family: 'Creepster', serif;
+  font-size: 1.2em;
+  letter-spacing: 3px;
+  line-height: .75em;
+}*/
 
 #boxForm form
 {
@@ -85,13 +95,13 @@ form label
   margin-bottom:15px;
 }
 
-.button
+.sing_submit
 {
   padding:10px;
   width:150px;
   
   /* Background par colorzilla.com */
-  background: rgb(255,175,75); /* Old browsers */
+background: rgb(255,175,75); /* Old browsers */
 background: -moz-linear-gradient(top, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,175,75,1)), color-stop(100%,rgba(255,146,10,1))); /* Chrome,Safari4+ */
 background: -webkit-linear-gradient(top, rgba(255,175,75,1) 0%,rgba(255,146,10,1) 100%); /* Chrome10+,Safari5.1+ */
@@ -113,3 +123,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', end
   margin-left:-28px;
 }
 
+.Versatile{
+  color: rgb(45, 138, 34);
+}
