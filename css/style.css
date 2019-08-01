@@ -88,7 +88,7 @@ form label
 {
   margin:20px;
   margin-left:-35px;
-  margin-bottom: -20px;
+  margin-bottom: -20px;*/
 }
 
 .sing_submit, .familiar{
@@ -112,6 +112,8 @@ form label
 
 .sing_submit:hover, .familiar:hover{
   color: green;
+/*  width: 250px;
+  height: 100px;*/
 }
 
 .Versatile{
@@ -130,4 +132,11 @@ form label
 
 .familiar{
   margin:20px;
+}
+.familiar:hover {
+background: linear-gradient(to bottom, #66ffff 0%, #ccff66 100%);
+}
+
+.sing_submit:hover{
+background: linear-gradient(to bottom, #ccff66 0%, #66ffff 100%);
 }
