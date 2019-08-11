@@ -145,6 +145,11 @@ background: linear-gradient(to bottom, #799f0c 0%, #ffe000 100%);
 }
 
 
+.remember{
+
+  margin-left: 65px;
+}
+
 /* Customize the label (the container) */
 .container {
   display: block;
@@ -169,8 +174,8 @@ background: linear-gradient(to bottom, #799f0c 0%, #ffe000 100%);
 
 /* Create a custom checkbox */
 .checkmark {
+  margin-left: 20px;
   display: block;
-  margin-left: -30px;
   position: absolute;
   top: 0;
   align-items: left;
@@ -275,4 +280,8 @@ background: linear-gradient(to bottom, #799f0c 0%, #ffe000 100%);
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+}
+
+input[placeholder] {
+   text-align: center;
 }
