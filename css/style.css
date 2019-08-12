@@ -64,14 +64,17 @@ img{
   border-style:none;
   border-bottom-style:solid;
   border-color:rgb(244, 102, 27);
-  font-family: 'Montserrat', sans-serif;
-  font-size:15px;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 600;
+  font-size:18px;
   color:rgb(244, 102, 27);
   background-color:rgb(255, 203, 96);
+  color: rgb(128, 0, 128);
 }
 
 .sign-text:focus
 {
+  margin-bottom: 2px; 
   background-color:rgba(255,255,255,0.2);
   border-style:none;
   outline: none;  
@@ -110,14 +113,6 @@ form label
   font-weight: bold;
 }
 
-.sing_submit:hover, .familiar:hover{
-  color:rgb(128, 0, 128);
-  animation: swing 0.6s ease;
-   animation-iteration-count: 1;
-  -webkit-animation: swing 0.6s ease;
-   -webkit-animation-iteration-count: 1;
-}
-
 .Versatile{
   color: rgb(45, 138, 34);
 }
@@ -130,6 +125,32 @@ form label
   letter-spacing: 3px;
   line-height: .75em;
   transition-duration: 1.3s;
+}
+
+.shake:hover {
+  color: rgb(128, 0, 128);
+  animation:shake 0.5s;
+  box-shadow: none;
+border: transparent;
+}
+
+@keyframes shake {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  30%,
+  100% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  60%{
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
 }
 
 .sing_submit:hover{
@@ -146,7 +167,6 @@ background: linear-gradient(to bottom, #799f0c 0%, #ffe000 100%);
 
 
 .remember{
-
   margin-left: 65px;
 }
 
@@ -226,60 +246,6 @@ background: linear-gradient(to bottom, #799f0c 0%, #ffe000 100%);
   justify-content: space-around;
   align-items: center;
   margin: 10px;
-}
-
-@keyframes swing {
-  15% {
-    -webkit-transform: translateX(9px);
-    transform: translateX(9px);
-  }
-  30% {
-    -webkit-transform: translateX(-9px);
-    transform: translateX(-9px);
-  }
-  40% {
-    -webkit-transform: translateX(6px);
-    transform: translateX(6px);
-  }
-  50% {
-    -webkit-transform: translateX(-6px);
-    transform: translateX(-6px);
-  }
-  65% {
-    -webkit-transform: translateX(3px);
-    transform: translateX(3px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes swing {
-  15% {
-    -webkit-transform: translateX(9px);
-    transform: translateX(9px);
-  }
-  30% {
-    -webkit-transform: translateX(-9px);
-    transform: translateX(-9px);
-  }
-  40% {
-    -webkit-transform: translateX(6px);
-    transform: translateX(6px);
-  }
-  50% {
-    -webkit-transform: translateX(-6px);
-    transform: translateX(-6px);
-  }
-  65% {
-    -webkit-transform: translateX(3px);
-    transform: translateX(3px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
 }
 
 input[placeholder] {
