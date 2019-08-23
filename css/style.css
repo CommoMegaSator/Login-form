@@ -1,24 +1,62 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://fonts.googleapis.com/css?family=Nothing+You+Could+Do);/* Google font */
 @import url(https://fonts.googleapis.com/css?family=Creepster);
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 
 body
 {
+  margin: 0px;
   display:flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   background-color:rgba(255, 203, 96, 0.5);
 }
 
-img{
-  width: 100%;
-  height: auto;
+.item-attributes{
+  width: 20%;
 }
+
+.items-menu{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color:rgba(255, 203, 96, 0.5);
+}
+
+.item-wrapper{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-item-wrapper{
+  margin: 8px;
+  width: 80%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.items-menu{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
 .logimage{
   display: block;
   z-index: 99999;
-  width: 150px;
 }
+
+.logimage img{
+width: 150px;
+}
+
 .logimage:hover {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
@@ -26,16 +64,20 @@ img{
 }
 #boxForm
 {
-  border-radius: 9%;
   top: -80px;
+  border-radius: 9%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align:center;
   background-color:rgb(255, 203, 96);
-  width:340px;
+  width:400px;
   position:relative;
   box-shadow:1px 1px 8px rgba(244, 102, 27,1);
+}
+
+#boxForm.item-form #title{
+  margin-top: 10px;
 }
 
 .logpass{
@@ -93,7 +135,7 @@ form label
   font-size: 12px;
 }
 
-.sing_submit, .familiar{  
+.sing_submit, .familiar, .buy{  
   padding: 10px;
   width: 150px;
   border-radius: 20px;
@@ -107,6 +149,7 @@ form label
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a',GradientType=0 ); /* IE6-9 */
   font-size: 15px;
   border-style:none;
+  outline: none;  
   box-shadow: 1px 1px rgba(244, 102, 27,1);
   cursor:pointer;
   font-family: 'Montserrat', sans-serif;color:white;
@@ -155,6 +198,7 @@ border: transparent;
 
 .sing_submit:hover{
 background: linear-gradient(to bottom, #ffe000 0%, #799f0c 100%);
+  outline: none;  
 }
 
 .familiar{
@@ -163,6 +207,7 @@ background: linear-gradient(to bottom, #ffe000 0%, #799f0c 100%);
 
 .familiar:hover {
 background: linear-gradient(to bottom, #799f0c 0%, #ffe000 100%);
+  outline: none;  
 }
 
 
@@ -170,7 +215,6 @@ background: linear-gradient(to bottom, #799f0c 0%, #ffe000 100%);
   margin-left: 65px;
 }
 
-/* Customize the label (the container) */
 .container {
   display: block;
   position: relative;
@@ -183,7 +227,6 @@ background: linear-gradient(to bottom, #799f0c 0%, #ffe000 100%);
   margin-top: 12px;
 }
 
-/* Hide the browser's default checkbox */
 .container input {
   position: absolute;
   opacity: 0;
@@ -192,7 +235,6 @@ background: linear-gradient(to bottom, #799f0c 0%, #ffe000 100%);
   width: 0;
 }
 
-/* Create a custom checkbox */
 .checkmark {
   margin-left: 20px;
   display: block;
@@ -205,29 +247,24 @@ background: linear-gradient(to bottom, #799f0c 0%, #ffe000 100%);
   border-radius: 80%;
 }
 
-/* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
-/* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
   background-color: rgb(128, 0, 128);
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the checkmark when checked */
 .container input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the checkmark/indicator */
 .container .checkmark:after {
   left: 7px;
   top: 3.5px;
@@ -250,4 +287,68 @@ background: linear-gradient(to bottom, #799f0c 0%, #ffe000 100%);
 
 input[placeholder] {
    text-align: center;
+}
+
+
+.item-form{
+  margin-top: 80px;
+}
+
+
+.descr{
+  display: -webkit-box;
+  font-size: 16px;
+  text-align: left;
+  margin: 15px 20px 0px;
+  font-family: 'Playfair Display', serif;
+  text-indent: 1em;
+  text-overflow: ellipsis;
+  color: rgb(128, 0, 128);
+  text-align: justify;
+  overflow: hidden;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+}
+
+div.item img{
+    height: 300px;
+    width: auto;
+    max-width: 300px;
+    background: 50% no-repeat;
+    background-size: cover;
+    }
+
+.buy-buttons{
+  display: inline-flex;
+  justify-content: space-around;
+  margin: 10px;
+  width: 250px;
+}
+
+.shopping-cart{
+  background-image: url(../images/shopping-cart.png);
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255,175,75);
+  background-size: cover;
+  border-radius: 30%;
+  border: none;
+  outline: none;  
+  border-style:none;
+  box-shadow: 1px 1px rgba(244, 102, 27,1);
+  cursor:pointer;
+}
+.shopping-cart:hover{
+  background-color: yellow;
+}
+div#boxForm.item-form{
+{
+  width: 600px;
+  top: -80px;
+  border-radius: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align:center;
+}
 }
